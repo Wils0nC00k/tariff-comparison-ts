@@ -1,0 +1,17 @@
+{
+  "tariff": [
+    {
+      "name": "basic electricity tariff",
+      "baseCost": 5,
+      "kwh": 0.22
+    },
+    {
+      "name": "Packaged Tariff",
+      "minYearlyRate": {
+        "price": 800,
+        "kWhY": 4000
+      },
+      "kwh": 0.3
+    }
+  ]
+}
