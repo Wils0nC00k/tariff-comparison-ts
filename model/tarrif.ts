@@ -7,9 +7,9 @@ interface MinYearlyRate {
 
 interface Tariff {
   name: String;
+  kwh: number;
   baseCost?: number;
   minYearlyRate?: MinYearlyRate;
-  kwh: number;
 }
 
 export interface TarrifWithYearlyConsumption {

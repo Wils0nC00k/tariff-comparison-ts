@@ -40,6 +40,14 @@ export const exampleTariffPrices = (req: Request, res: Response) => {
 };
 
 export const consumptionQuery = (req: Request, res: Response) => {
-  const consumption = parseInt(req.params.consumption);
-  res.send(yearlyConsumption(consumption));
+  if (req.params.consumption.match(/^[0-9]+$/) !== null) {
+    const consumption = parseInt(req.params.consumption);
+    res.send(yearlyConsumption(consumption));
+  } else {
+    res.send("Please enter a number, eg. 4500");
+  }
+};
+
+export const handleBadRequest = (req: Request, res: Response) => {
+  res.status(404).send("Oh no! Page not found :'(");
 };
